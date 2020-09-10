@@ -6,6 +6,8 @@ Can only be run in python3
 
 
 ## Install
+pip install licensing
+
 pkg update && pkg upgrade
 
 pkg install python git
